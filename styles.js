@@ -1,13 +1,8 @@
-import { StyleSheet } from 'react-native';
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    img: {
-        width: 100,
-        height: 100,
-    }
-});
-export default styles;
+export default {
+    rosa: "#F20574", 
+    azulEscuro:	"#034C8C",
+    verdeAgua: "#4ED9D9",
+    azulClaro: "#1AB6D9", 
+    amarelo: "#F2B705", 
+    laranja: "#F29F05",
+  };
