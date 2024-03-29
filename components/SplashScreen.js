@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import { View, Image, Animated, Easing, StyleSheet } from 'react-native';
+import { View, Animated, Easing, StyleSheet } from 'react-native';
+import IconNera from './IconNera'; // Importe o componente IconNera
 
 const SplashScreen = ({ navigation }) => {
     const rotation = useRef(new Animated.Value(0)).current;
@@ -14,7 +15,7 @@ const SplashScreen = ({ navigation }) => {
 
         rotateAnimation.start(() => {
             // Navega para a próxima tela após o término da animação
-            navigation.replace('Login');
+            navigation.replace('Home');
         });
 
         return () => {
@@ -33,11 +34,9 @@ const SplashScreen = ({ navigation }) => {
 
     return (
         <View style={[styles.container, styles.whiteBackground]}>
-            <Animated.Image
-                source={require('../assets/icone.png')} 
-                style={[styles.image, animatedStyle]}
-                resizeMode="contain"
-            />
+            <Animated.View style={[styles.imageContainer, animatedStyle]}>
+                <IconNera />
+            </Animated.View>
         </View>
     );
 };
@@ -51,9 +50,9 @@ const styles = StyleSheet.create({
     whiteBackground: {
         backgroundColor: 'white',
     },
-    image: {
-        width: 200, 
-        height: 200, 
+    imageContainer: {
+        width: 200,
+        height: 200,
     },
 });
 
