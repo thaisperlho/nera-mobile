@@ -6,5 +6,6 @@ export default {
     amarelo: "#F2B705", 
     laranja: "#F29F05",
     branco: "#FFFFFF",
-    cinza: "#433E3E"
+    cinza: "#433E3E",
+    textTrilhas: "#888585"
   };
