@@ -25,7 +25,7 @@ function login() {
 
                 <View style={stylesButtons.div_buttons}>
                     <Pressable style={stylesButtons.button_professor} onPress={() => changeColor(colors.amarelo)}>
-                        <Text style={[{fontSize:20}]}>professor</Text>
+                        <Text style={[{ fontSize: 20 }, {color:'white'}, {fontWeight: 'bold'}]}>Professor</Text>
                     </Pressable>
                     <View style={[stylesButtons.div_transction, { flexDirection: flexDirection }]}>
                         <View style={stylesButtons.div_prof}>
@@ -36,7 +36,7 @@ function login() {
                         </View>
                     </View>
                     <Pressable style={stylesButtons.button_aluno} onPress={() => changeColor(colors.laranja, 'column-reverse')}>
-                        <Text style={[{fontSize:20}]}>aluno</Text>
+                        <Text style={[{ fontSize: 20 }, {color:'white'}, {fontWeight: 'bold'}]}>Aluno</Text>
                     </Pressable>
                 </View>
 
@@ -46,17 +46,30 @@ function login() {
                     <TextInput style={stylesForm.input_email} placeholder='Email'></TextInput>
                     <TextInput style={stylesForm.input_cpf} placeholder='CPF'></TextInput>
                     <TextInput style={stylesForm.input_senha} placeholder='Senha'></TextInput>
+                    <Text style={[{ width: '100%' }, {}, { height: '30%' }, {marginLeft:'100%'}]}>Esqueceu a senha ?</Text>
 
 
 
                 </View>
-                <Text style={[{ width: '100%' }, { height: '5%' }, { backgroundColor: 'black' }]}>Teste</Text>
-                    
-                    <Pressable style={[{ width: '100%' }, { height: '10%' }, { backgroundColor: 'green' }]}></Pressable>
 
-                    <Text style={[{ width: '100%' }, { height: '5%' }, { backgroundColor: 'black' }]}>OU</Text>
+                <View style={stylesForm.opcoesEntrar}>
+                    <Pressable style={stylesForm.button_entrar}>
+                        <Text style={[{ fontSize: 15 }, {color:'white'}]}>Entrar</Text>
+                    </Pressable>
+                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                        <View style={{ flex: 1, height: 1, backgroundColor: 'black' }} />
+                        <View>
+                            <Text style={{ width: 50, textAlign: 'center' }}>OU</Text>
+                        </View>
+                        <View style={{ flex: 1, height: 1, backgroundColor: 'black' }} />
+                    </View>
 
-                    <Pressable style={[{ width: '100%' }, { height: '10%' }, { backgroundColor: 'lightgreen' }]}></Pressable>
+
+                    <Pressable style={stylesForm.button_criarCon}>
+                        <Text style={[{ fontSize: 15 }, {color:'white'}]}>Criar conta</Text>
+                    </Pressable>
+                </View>
+
 
             </View>
         </View>
@@ -69,13 +82,23 @@ const stylesForm = StyleSheet.create({
         display: 'flex',
         flexDirection: 'column',
         width: '100%',
-        height: '50%',
+        height: '55%',
         paddingTop: 20,
-        gap: 25,
-        alignItems:'center'
+        alignItems: 'center',
+
+    },
+
+    opcoesEntrar: {
+        width: '100%',
+        height: '30%',
+        paddingTop: '5%',
+        gap: 14,
+        alignItems: 'center',
+
     },
 
     input_email: {
+        margin: 13,
         paddingLeft: 15,
         width: '90%',
         height: '20%',
@@ -84,6 +107,7 @@ const stylesForm = StyleSheet.create({
     },
 
     input_cpf: {
+        margin: 13,
         paddingLeft: 15,
         width: '90%',
         height: '20%',
@@ -92,11 +116,29 @@ const stylesForm = StyleSheet.create({
     },
 
     input_senha: {
+        margin: 13,
         paddingLeft: 15,
         width: '90%',
         height: '20%',
         borderRadius: 18,
         backgroundColor: colors.branco
+    },
+
+    button_entrar: {
+        paddingTop:8,
+        alignItems:'center',
+        width: '90%',
+        height: '30%',
+        borderRadius: 18,
+        backgroundColor: colors.azulEscuro
+    },
+    button_criarCon: {
+        paddingTop:8,
+        alignItems:'center',
+        width: '50%',
+        height: '30%',
+        borderRadius: 18,
+        backgroundColor: colors.azulEscuro
     }
 })
 
@@ -110,7 +152,7 @@ const stylesButtons = StyleSheet.create({
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        height: '100',
+        height: '100%',
         width: '100%',
         padding: '5%',
         paddingTop: '0%',
