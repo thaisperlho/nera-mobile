@@ -25,7 +25,7 @@ function login() {
 
                 <View style={stylesButtons.div_buttons}>
                     <Pressable style={stylesButtons.button_professor} onPress={() => changeColor(colors.amarelo)}>
-                        <Text>professor</Text>
+                        <Text style={[{fontSize:20}]}>professor</Text>
                     </Pressable>
                     <View style={[stylesButtons.div_transction, { flexDirection: flexDirection }]}>
                         <View style={stylesButtons.div_prof}>
@@ -36,7 +36,7 @@ function login() {
                         </View>
                     </View>
                     <Pressable style={stylesButtons.button_aluno} onPress={() => changeColor(colors.laranja, 'column-reverse')}>
-                        <Text>aluno</Text>
+                        <Text style={[{fontSize:20}]}>aluno</Text>
                     </Pressable>
                 </View>
 
@@ -69,29 +69,32 @@ const stylesForm = StyleSheet.create({
         display: 'flex',
         flexDirection: 'column',
         width: '100%',
-        height: '40%',
+        height: '50%',
         paddingTop: 20,
-        gap: 20,
+        gap: 25,
         alignItems:'center'
     },
 
     input_email: {
+        paddingLeft: 15,
         width: '90%',
-        height: '25%',
+        height: '20%',
         borderRadius: 18,
         backgroundColor: colors.branco
     },
 
     input_cpf: {
+        paddingLeft: 15,
         width: '90%',
-        height: '25%',
+        height: '20%',
         borderRadius: 18,
         backgroundColor: colors.branco
     },
 
     input_senha: {
+        paddingLeft: 15,
         width: '90%',
-        height: '25%',
+        height: '20%',
         borderRadius: 18,
         backgroundColor: colors.branco
     }
@@ -107,7 +110,7 @@ const stylesButtons = StyleSheet.create({
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        height: '100%',
+        height: '100',
         width: '100%',
         padding: '5%',
         paddingTop: '0%',
@@ -145,6 +148,8 @@ const stylesButtons = StyleSheet.create({
     },
 
     button_aluno: {
+        paddingTop: 25,
+        alignItems: "center",
         alignItems: "center",
         width: '40%',
         height: '100%',
@@ -154,6 +159,7 @@ const stylesButtons = StyleSheet.create({
     },
 
     button_professor: {
+        paddingTop: 25,
         alignItems: "center",
         width: '40%',
         height: '100%',
