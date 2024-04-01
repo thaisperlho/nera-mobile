@@ -1,6 +1,5 @@
 import React from 'react';
-import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { View, Text, StyleSheet } from 'react-native';
 import IconNera from './IconNera';
 import BottomMenuTeacher from './MenuTeacher';
 import ButtonBlue from './ButtonBlue';
