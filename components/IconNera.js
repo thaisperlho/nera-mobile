@@ -1,7 +1,9 @@
+// IconNera.js
+
 import React from 'react';
 import { Image, StyleSheet } from 'react-native';
 
-const IconNera = ({ source }) => {
+const IconNera = () => {
     return (
         <Image
             source={require('../assets/icone.png')}
@@ -13,8 +15,10 @@ const IconNera = ({ source }) => {
 
 const styles = StyleSheet.create({
     image: {
-        width: 200,
-        height: 200,
+        width: 50,
+        height: 56,
+        marginTop: 10, // Defina a margem somente na parte superior
+        alignSelf: 'center', // Centralize o ícone horizontalmente
     },
 });
 
