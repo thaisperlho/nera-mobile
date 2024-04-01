@@ -1,9 +1,14 @@
 import React from 'react';
 import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import IconNera from './IconNera';
 import BottomMenuTeacher from './MenuTeacher';
+import ButtonBlue from './ButtonBlue';
 
-const Home = () => {
+const Home = ({ navigation }) => {
+    const handleCreateClassPress = () => {
+        navigation.navigate('CreateClass');
+    };
     return (
         <View style={styles.page}>
             <View style={styles.topIcon}>
@@ -15,26 +20,9 @@ const Home = () => {
             </View>
 
             <View style={styles.containerCreateClassroom}>
-                <TouchableOpacity style={{
-                    backgroundColor: '#135794',
-                    padding: 12,
-                    borderRadius: 30,
-                    shadowColor: '#000',
-                    shadowOffset: {
-                        width: 1,
-                        height: 1,
-                    },
-                    shadowOpacity: 0.3,
-                    shadowRadius: 3,
-                    elevation: 5,
-                }}
-                    onPress={() => console.log('Botão pressionado')}>
-
-                    <Text style={styles.buttonText}>Criar nova sala</Text>
-                </TouchableOpacity>
-
+                <ButtonBlue onPress={handleCreateClassPress} title="Criar nova sala" />
             </View>
-            <BottomMenuTeacher />
+            <BottomMenuTeacher/>
         </View>
     );
 };
@@ -76,7 +64,7 @@ const styles = StyleSheet.create({
 
     titleContainerMyClassroom: {
         flex: 1,
-        fontSize:25,
+        fontSize: 25,
         top: '5%',
         fontWeight: '600',
 
