@@ -1,13 +1,38 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
 import IconNera from './IconNera';
 import BottomMenuTeacher from './MenuTeacher';
 
 const Home = () => {
     return (
-        <View style={styles.container}>
+        <View style={styles.page}>
             <View style={styles.topIcon}>
                 <IconNera />
+            </View>
+
+            <View style={styles.containerMyClassroom}>
+                <Text style={styles.titleContainerMyClassroom}>Minhas salas</Text>
+            </View>
+
+            <View style={styles.containerCreateClassroom}>
+                <TouchableOpacity style={{
+                    backgroundColor: '#135794',
+                    padding: 12,
+                    borderRadius: 30,
+                    shadowColor: '#000',
+                    shadowOffset: {
+                        width: 1,
+                        height: 1,
+                    },
+                    shadowOpacity: 0.3,
+                    shadowRadius: 3,
+                    elevation: 5,
+                }}
+                    onPress={() => console.log('Botão pressionado')}>
+
+                    <Text style={styles.buttonText}>Criar nova sala</Text>
+                </TouchableOpacity>
+
             </View>
             <BottomMenuTeacher />
         </View>
@@ -15,7 +40,7 @@ const Home = () => {
 };
 
 const styles = StyleSheet.create({
-    container: {
+    page: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
@@ -27,10 +52,65 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginTop: 50
     },
-    text: {
-        fontSize: 20,
-        fontWeight: 'bold',
+
+    containerMyClassroom: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'white',
+        position: 'absolute',
+        top: '20%',
+        left: '10%',
+        width: '80%',
+        height: '30%',
+        borderRadius: 40,
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 1,
+            height: 1,
+        },
+        shadowOpacity: 0.3,
+        shadowRadius: 3,
+        elevation: 5,
     },
+
+    titleContainerMyClassroom: {
+        flex: 1,
+        fontSize:25,
+        top: '5%',
+        fontWeight: '600',
+
+    },
+
+    containerCreateClassroom: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'white',
+        position: 'absolute',
+        top: '55%',
+        left: '50%',
+        transform: [{ translateX: '-50%' }],
+        width: '80%',
+        height: '10%',
+        borderRadius: 30,
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 1,
+            height: 1,
+        },
+        shadowOpacity: 0.3,
+        shadowRadius: 3,
+        elevation: 5,
+    },
+
+    buttonText: {
+        fontSize: 16,
+        color: 'white',
+    },
+
+
+
 });
 
 export default Home;
