@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import IconNera from './IconNera'; // Importe o componente IconNera
-import BottomMenuTeacher from './MenuTeacher'; // Importe o componente BottomMenu
+import IconNera from './IconNera';
+import BottomMenuTeacher from './MenuTeacher';
 
 const Home = () => {
     return (
