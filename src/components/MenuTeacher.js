@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native'; // Importe o hook useNavigation
-import profileIcon from '../assets/profileIcon.png'; // Importe o ícone para Teacher Profile
-import classroomIcon from '../assets/classroomIcon.png'; // Importe o ícone para Teacher Classroom
-import homeIcon from '../assets/home.png'; // Importe o ícone para Home
+import profileIcon from '../assets/profileIcon.png';
+import classroomIcon from '../assets/classroomIcon.png'; 
+import homeIcon from '../assets/home.png'; 
 
 const BottomMenuTeacher = () => {
     const navigation = useNavigation();
@@ -16,12 +16,11 @@ const BottomMenuTeacher = () => {
         navigation.navigate('TeacherClassroom');
     };
 
-    const goToHome = () => {
-        navigation.navigate('Home');
+    const goToHomeTeacher = () => {
+        navigation.navigate('HomeTeacher');
     };
 
     const getIconStyle = (routeName) => {
-        // Verifica se a rota atual é a mesma que a rota do ícone e retorna o estilo correspondente
         return {
             ...styles.icon,
             tintColor: navigation.getState().routes[navigation.getState().index].name === routeName ? '#F20574' : '#135794',
@@ -30,8 +29,8 @@ const BottomMenuTeacher = () => {
 
     return (
         <View style={styles.container}>
-            <TouchableOpacity style={styles.button} onPress={goToHome}>
-                <Image source={homeIcon} style={getIconStyle('Home')} />
+            <TouchableOpacity style={styles.button} onPress={goToHomeTeacher}>
+                <Image source={homeIcon} style={getIconStyle('HomeTeacher')} />
             </TouchableOpacity>
             <TouchableOpacity style={styles.button} onPress={goToTeacherClassroom}>
                 <Image source={classroomIcon} style={getIconStyle('TeacherClassroom')} />

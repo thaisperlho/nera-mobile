@@ -17,8 +17,8 @@ const styles = StyleSheet.create({
     image: {
         width: 50,
         height: 56,
-        marginTop: 10, // Defina a margem somente na parte superior
-        alignSelf: 'center', // Centralize o ícone horizontalmente
+        marginTop: 10, 
+        alignSelf: 'center',
     },
 });
 

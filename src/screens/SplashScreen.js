@@ -14,7 +14,7 @@ const SplashScreen = ({ navigation }) => {
 
         rotateAnimation.start(() => {
             // Navega para a próxima tela após o término da animação
-            navigation.replace('Home');
+            navigation.replace('LoginScreen');
         });
 
         return () => {
@@ -34,7 +34,7 @@ const SplashScreen = ({ navigation }) => {
     return (
         <View style={[styles.container, styles.whiteBackground]}>
             <Animated.Image
-                source={require('../assets/icone.png')} 
+                source={require('../assets/Icone.png')} 
                 style={[styles.image, animatedStyle]}
                 resizeMode="contain"
             />
