@@ -6,6 +6,7 @@ import HomeTeacher from './src/screens/HomeTeacher';
 import TeacherClassroom from './src/screens/TeacherClassroom';
 import TeacherProfile from './src/screens/TeacherProfile';
 import LoginScreen from './src/screens/LoginScreen';
+import StudentProfile from './src/screens/StudentProfile';
 import CreateClass from './src/components/CreateClass';
 
 const Stack = createStackNavigator();
@@ -13,13 +14,14 @@ const Stack = createStackNavigator();
 export default function App() {
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="Splash" headerMode="none">
+            <Stack.Navigator initialRouteName="Splash" screenOptions={{headerShown: false}}>
                 <Stack.Screen name="Splash" component={SplashScreen} />
                 <Stack.Screen name="LoginScreen" component={LoginScreen} />
                 <Stack.Screen name="HomeTeacher" component={HomeTeacher} />
                 <Stack.Screen name="TeacherClassroom" component={TeacherClassroom} />
                 <Stack.Screen name="TeacherProfile" component={TeacherProfile} />
                 <Stack.Screen name="CreateClass" component={CreateClass} />
+                <Stack.Screen name="StudentProfile" component={StudentProfile} />
             </Stack.Navigator>
         </NavigationContainer>
     );

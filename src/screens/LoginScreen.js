@@ -2,7 +2,10 @@ import { useState } from 'react';
 import { StatusBar, StyleSheet, Text, View, Image, Pressable, TextInput } from "react-native";
 import colors from '../components/styles';
 
-function login({navigation}) {
+
+
+const LoginScreen = ({ navigation }) => {
+
 
     const [cor, setCor] = useState(colors.amarelo);
     const [flexDirection, setflexDirection] = useState("column");
@@ -11,6 +14,14 @@ function login({navigation}) {
         setCor(corFunc);
         setflexDirection(flexDirect)
     };
+
+    const home = () => {
+        navigation.replace('Home')
+    }
+
+    const StudentProfile = () => {
+        navigation.replace('StudentProfile')
+    }
 
      const handleEntrar = () => {
         navigation.navigate('HomeTeacher');
@@ -58,8 +69,9 @@ function login({navigation}) {
 
                 </View>
 
-                <View style={stylesForm.opcoesEntrar}>
+                <View style={stylesForm.opcoesEntrar}>                
                     <Pressable style={stylesForm.button_entrar} onPress={handleEntrar}>
+
                         <Text style={[{ fontSize: 15 }, { color: 'white' }]}>Entrar</Text>
                     </Pressable>
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
@@ -71,7 +83,7 @@ function login({navigation}) {
                     </View>
 
 
-                    <Pressable style={stylesForm.button_criarCon}>
+                    <Pressable style={stylesForm.button_criarCon} onPress={StudentProfile}>
                         <Text style={[{ fontSize: 15 }, { color: 'white' }]}>Criar conta</Text>
                     </Pressable>
                 </View>
@@ -79,8 +91,11 @@ function login({navigation}) {
 
             </View>
         </View>
-    )
+    );
 }
+
+
+
 
 const stylesForm = StyleSheet.create({
 
@@ -254,4 +269,4 @@ const stylesButtons = StyleSheet.create({
 
 
 
-export default login;
+export default LoginScreen;
