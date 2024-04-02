@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, Dimensions, Modal, Button } from 'react-native';
-import colors from '../styles';
+import colors from '../components/styles';
 
 const FractionScreen = () => {
   const [selectedFraction, setSelectedFraction] = useState(null);
