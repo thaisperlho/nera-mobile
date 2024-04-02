@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         top: '55%',
         left: '50%',
-        transform: [{ translateX: '-50%' }],
+        transform: [{ translateX: 10 }],
         width: '80%',
         height: '10%',
         borderRadius: 30,

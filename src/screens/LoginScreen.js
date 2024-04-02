@@ -1,15 +1,19 @@
 import { useState } from 'react';
 import { StatusBar, StyleSheet, Text, View, Image, Pressable, TextInput } from "react-native";
 import colors from '../components/styles';
-import ButtonBlue from '../components/ButtonBlue';
 
-function Login() {
+
+const LoginScreen = ({ navigation }) => {
     const [cor, setCor] = useState(colors.amarelo);
     const [flexDirection, setflexDirection] = useState("column");
     const changeColor = (corFunc, flexDirect) => {
         setCor(corFunc);
         setflexDirection(flexDirect)
     };
+
+    const teste = () => {
+        navigation.replace('Home')
+    }
 
     return (
         //view principal
@@ -54,10 +58,7 @@ function Login() {
                 </View>
 
                 <View style={stylesForm.opcoesEntrar}>
-
-
-
-                    <Pressable style={stylesForm.button_entrar}>
+                    <Pressable style={stylesForm.button_entrar} onPress={teste}>
                         <Text style={[{ fontSize: 15 }, { color: 'white' }]}>Entrar</Text>
                     </Pressable>
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
@@ -77,8 +78,11 @@ function Login() {
 
             </View>
         </View>
-    )
+    );
 }
+
+
+
 
 const stylesForm = StyleSheet.create({
 
@@ -252,4 +256,4 @@ const stylesButtons = StyleSheet.create({
 
 
 
-export default Login;
+export default LoginScreen;
