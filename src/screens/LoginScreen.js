@@ -2,13 +2,11 @@ import { useState } from 'react';
 import { StatusBar, StyleSheet, Text, View, Image, Pressable, TextInput } from "react-native";
 import colors from '../components/styles';
 
-<<<<<<< HEAD
+
 
 const LoginScreen = ({ navigation }) => {
-=======
-function login({navigation}) {
 
->>>>>>> 1723c36333643cf6c5276539828fa7aa9c0c632b
+
     const [cor, setCor] = useState(colors.amarelo);
     const [flexDirection, setflexDirection] = useState("column");
 
@@ -17,7 +15,6 @@ function login({navigation}) {
         setflexDirection(flexDirect)
     };
 
-<<<<<<< HEAD
     const home = () => {
         navigation.replace('Home')
     }
@@ -25,11 +22,10 @@ function login({navigation}) {
     const StudentProfile = () => {
         navigation.replace('StudentProfile')
     }
-=======
+
      const handleEntrar = () => {
         navigation.navigate('HomeTeacher');
     };
->>>>>>> 1723c36333643cf6c5276539828fa7aa9c0c632b
 
     return (
         //view principal
@@ -73,12 +69,9 @@ function login({navigation}) {
 
                 </View>
 
-                <View style={stylesForm.opcoesEntrar}>
-<<<<<<< HEAD
-                    <Pressable style={stylesForm.button_entrar} onPress={home}>
-=======
+                <View style={stylesForm.opcoesEntrar}>                
                     <Pressable style={stylesForm.button_entrar} onPress={handleEntrar}>
->>>>>>> 1723c36333643cf6c5276539828fa7aa9c0c632b
+
                         <Text style={[{ fontSize: 15 }, { color: 'white' }]}>Entrar</Text>
                     </Pressable>
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>

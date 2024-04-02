@@ -1,6 +1,6 @@
 import { Image, Text, View, StyleSheet, ScrollView } from "react-native";
 import CircleConquist from '../components/CircleConquist';
-import MenuTeacher from '../components/MenuTeacher';
+import MenuStudent from '../components/MenuStudent';
 
 
 const StudentProfile = ({ navigation }) => {
@@ -30,7 +30,7 @@ const StudentProfile = ({ navigation }) => {
             <View style={styles.div_estatisticas}>
 
             </View>
-            <MenuTeacher></MenuTeacher>
+            <MenuStudent></MenuStudent>
         </View>
     )
 }
