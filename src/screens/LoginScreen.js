@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { StatusBar, StyleSheet, Text, View, Image, Pressable, TextInput } from "react-native";
 import colors from '../components/styles';
+import ButtonBlue from '../components/ButtonBlue';
 
-function login() {
+function Login() {
     const [cor, setCor] = useState(colors.amarelo);
     const [flexDirection, setflexDirection] = useState("column");
     const changeColor = (corFunc, flexDirect) => {
@@ -53,6 +54,9 @@ function login() {
                 </View>
 
                 <View style={stylesForm.opcoesEntrar}>
+
+
+
                     <Pressable style={stylesForm.button_entrar}>
                         <Text style={[{ fontSize: 15 }, { color: 'white' }]}>Entrar</Text>
                     </Pressable>
@@ -248,4 +252,4 @@ const stylesButtons = StyleSheet.create({
 
 
 
-export default login;
+export default Login;
