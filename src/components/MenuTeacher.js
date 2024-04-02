@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         alignItems: 'center',
         backgroundColor: 'white',
-        paddingVertical: 20,
+        paddingVertical: 30,
         paddingHorizontal: 30,
         position: 'absolute',
         bottom: 0,
@@ -71,8 +71,8 @@ const styles = StyleSheet.create({
     },
 
     icon: {
-        width: 28,
-        height: 30,
+        width: 36,
+        height: 38,
     },
 });
 
