@@ -21,7 +21,6 @@ const BottomMenuTeacher = () => {
     };
 
     const getIconStyle = (routeName) => {
-        // Verifica se a rota atual é a mesma que a rota do ícone e retorna o estilo correspondente
         return {
             ...styles.icon,
             tintColor: navigation.getState().routes[navigation.getState().index].name === routeName ? '#F20574' : '#135794',
