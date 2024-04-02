@@ -2,12 +2,18 @@ import { useState } from 'react';
 import { StatusBar, StyleSheet, Text, View, Image, Pressable, TextInput } from "react-native";
 import colors from '../components/styles';
 
-function login() {
+function login({navigation}) {
+
     const [cor, setCor] = useState(colors.amarelo);
     const [flexDirection, setflexDirection] = useState("column");
+
     const changeColor = (corFunc, flexDirect) => {
         setCor(corFunc);
         setflexDirection(flexDirect)
+    };
+
+     const handleEntrar = () => {
+        navigation.navigate('HomeTeacher');
     };
 
     return (
@@ -53,7 +59,7 @@ function login() {
                 </View>
 
                 <View style={stylesForm.opcoesEntrar}>
-                    <Pressable style={stylesForm.button_entrar}>
+                    <Pressable style={stylesForm.button_entrar} onPress={handleEntrar}>
                         <Text style={[{ fontSize: 15 }, { color: 'white' }]}>Entrar</Text>
                     </Pressable>
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
