@@ -6,6 +6,7 @@ import Home from './src/screens/Home';
 import TeacherClassroom from './src/screens/TeacherClassroom';
 import TeacherProfile from './src/screens/TeacherProfile';
 import LoginScreen from './src/screens/LoginScreen';
+import StudentProfile from './src/screens/StudentProfile';
 import CreateClass from './src/components/CreateClass';
 
 const Stack = createStackNavigator();
@@ -20,6 +21,7 @@ export default function App() {
                 <Stack.Screen name="TeacherClassroom" component={TeacherClassroom} />
                 <Stack.Screen name="TeacherProfile" component={TeacherProfile} />
                 <Stack.Screen name="CreateClass" component={CreateClass} />
+                <Stack.Screen name="StudentProfile" component={StudentProfile} />
             </Stack.Navigator>
         </NavigationContainer>
     );

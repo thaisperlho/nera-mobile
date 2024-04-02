@@ -11,8 +11,12 @@ const LoginScreen = ({ navigation }) => {
         setflexDirection(flexDirect)
     };
 
-    const teste = () => {
+    const home = () => {
         navigation.replace('Home')
+    }
+
+    const StudentProfile = () => {
+        navigation.replace('StudentProfile')
     }
 
     return (
@@ -58,7 +62,7 @@ const LoginScreen = ({ navigation }) => {
                 </View>
 
                 <View style={stylesForm.opcoesEntrar}>
-                    <Pressable style={stylesForm.button_entrar} onPress={teste}>
+                    <Pressable style={stylesForm.button_entrar} onPress={home}>
                         <Text style={[{ fontSize: 15 }, { color: 'white' }]}>Entrar</Text>
                     </Pressable>
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
@@ -70,7 +74,7 @@ const LoginScreen = ({ navigation }) => {
                     </View>
 
 
-                    <Pressable style={stylesForm.button_criarCon}>
+                    <Pressable style={stylesForm.button_criarCon} onPress={StudentProfile}>
                         <Text style={[{ fontSize: 15 }, { color: 'white' }]}>Criar conta</Text>
                     </Pressable>
                 </View>
