@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import IconNera from './IconNera';
-import BottomMenuTeacher from './MenuTeacher';
-import ButtonBlue from './ButtonBlue';
+import IconNera from '../components/IconNera';
+import BottomMenuTeacher from '../components/MenuTeacher';
+import ButtonBlue from '../components/ButtonBlue';
 
 const Home = ({ navigation }) => {
     const handleCreateClassPress = () => {

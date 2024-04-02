@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import  BottomMenuTeacher from './MenuTeacher'; // Importe o componente BottomMenu
+import  BottomMenuTeacher from '../components/MenuTeacher'; // Importe o componente BottomMenu
 
 const TeacherClassroom = () => {
     return (

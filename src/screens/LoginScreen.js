@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { StatusBar, StyleSheet, Text, View, Image, Pressable, TextInput } from "react-native";
-import colors from '../styles';
+import colors from '../components/styles';
 
 function login() {
     const [cor, setCor] = useState(colors.amarelo);
@@ -16,7 +16,7 @@ function login() {
             <StatusBar style="" />
             {/*view img*/}
             <View style={stylesButtons.top}>
-                <Image source={require('../image/logoneraMinimizado.png')} style={stylesButtons.img} />
+                <Image source={require('../assets/logoneraMinimizado.png')} style={stylesButtons.img} />
             </View>
 
             {/*view form*/}
@@ -25,7 +25,7 @@ function login() {
 
                 <View style={stylesButtons.div_buttons}>
                     <Pressable style={stylesButtons.button_professor} onPress={() => changeColor(colors.amarelo)}>
-                        <Text style={[{ fontSize: 20 }, {color:'white'}, {fontWeight: 'bold'}]}>Professor</Text>
+                        <Text style={[{ fontSize: 20 }, { color: 'white' }, { fontWeight: 'bold' }]}>Professor</Text>
                     </Pressable>
                     <View style={[stylesButtons.div_transction, { flexDirection: flexDirection }]}>
                         <View style={stylesButtons.div_prof}>
@@ -36,7 +36,7 @@ function login() {
                         </View>
                     </View>
                     <Pressable style={stylesButtons.button_aluno} onPress={() => changeColor(colors.laranja, 'column-reverse')}>
-                        <Text style={[{ fontSize: 20 }, {color:'white'}, {fontWeight: 'bold'}]}>Aluno</Text>
+                        <Text style={[{ fontSize: 20 }, { color: 'white' }, { fontWeight: 'bold' }]}>Aluno</Text>
                     </Pressable>
                 </View>
 
@@ -46,7 +46,7 @@ function login() {
                     <TextInput style={stylesForm.input_email} placeholder='Email'></TextInput>
                     <TextInput style={stylesForm.input_cpf} placeholder='CPF'></TextInput>
                     <TextInput style={stylesForm.input_senha} placeholder='Senha'></TextInput>
-                    <Text style={[{ width: '100%' }, {}, { height: '30%' }, {marginLeft:'100%'}]}>Esqueceu a senha ?</Text>
+                    <Text style={[{ width: '100%' }, {}, { height: '30%' }, { marginLeft: '100%' }]}>Esqueceu a senha ?</Text>
 
 
 
@@ -54,7 +54,7 @@ function login() {
 
                 <View style={stylesForm.opcoesEntrar}>
                     <Pressable style={stylesForm.button_entrar}>
-                        <Text style={[{ fontSize: 15 }, {color:'white'}]}>Entrar</Text>
+                        <Text style={[{ fontSize: 15 }, { color: 'white' }]}>Entrar</Text>
                     </Pressable>
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                         <View style={{ flex: 1, height: 1, backgroundColor: 'black' }} />
@@ -66,7 +66,7 @@ function login() {
 
 
                     <Pressable style={stylesForm.button_criarCon}>
-                        <Text style={[{ fontSize: 15 }, {color:'white'}]}>Criar conta</Text>
+                        <Text style={[{ fontSize: 15 }, { color: 'white' }]}>Criar conta</Text>
                     </Pressable>
                 </View>
 
@@ -125,16 +125,16 @@ const stylesForm = StyleSheet.create({
     },
 
     button_entrar: {
-        paddingTop:8,
-        alignItems:'center',
+        paddingTop: 8,
+        alignItems: 'center',
         width: '90%',
         height: '30%',
         borderRadius: 18,
         backgroundColor: colors.azulEscuro
     },
     button_criarCon: {
-        paddingTop:8,
-        alignItems:'center',
+        paddingTop: 8,
+        alignItems: 'center',
         width: '50%',
         height: '30%',
         borderRadius: 18,
