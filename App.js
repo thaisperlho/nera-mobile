@@ -1,7 +1,7 @@
-import Padrao from "./src/screens/Padrao"
+import FractionScreen from "./src/screens/FractionScreen"
 
 export default function App() {
   return (
-    <Padrao/>
+    <FractionScreen/>
   )
 }
