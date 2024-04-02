@@ -8,7 +8,7 @@ const BottomMenuStudent = () => {
     const navigation = useNavigation();
 
     const goToStudentProfile = () => {
-        navigation.navigate('TeacherProfile');
+        navigation.navigate('StudentProfile');
     };
 
     const goToHomeStudent = () => {
@@ -29,7 +29,7 @@ const BottomMenuStudent = () => {
             </TouchableOpacity>
     
             <TouchableOpacity style={styles.button} onPress={goToStudentProfile}>
-                <Image source={profileIcon} style={getIconStyle('TeacherStudent')} />
+                <Image source={profileIcon} style={getIconStyle('StudentProfile')} />
             </TouchableOpacity>
 
         </View>
