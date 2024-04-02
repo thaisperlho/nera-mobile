@@ -1,7 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 import colors from '../../styles';
-import ScrollView from '../../components/ScrollView';
 
 const Trilhas = () => {
     return (
@@ -13,8 +12,30 @@ const Trilhas = () => {
                 <Image source={require('../../image/trilha.png')} style={styles.iconeBox} />
                 <Text style={styles.textBox}>Trilhas</Text>
             </View>
-            <Image source={require('../../image/fracao.png')} style={styles.img} />
-            <Text style={styles.text}>Trilha de Frações</Text>
+            <View style={styles.main}>
+                <ScrollView horizontal={true} style={{ display: 'flex', flexDirection: 'row' }}>
+                    <View style={styles.trilha1}>
+                        <Image source={require('../../image/fracao.png')} style={styles.img} />
+                        <Text style={styles.text}>Trilha de Frações</Text>
+                    </View>
+                    <View style={styles.trilha2}>
+                        <Image source={require('../../image/por.png')} style={styles.img} />
+                        <Text style={styles.text}>Trilha de Porcentagem</Text>
+                    </View>
+                    <View style={styles.trilha3}>
+                        <Image source={require('../../image/geo.png')} style={styles.img} />
+                        <Text style={styles.text}>TTrilha de Geometria</Text>
+                    </View>
+                    <View style={styles.trilha4}>
+                        <Image source={require('../../image/matriz.png')} style={styles.img} />
+                        <Text style={styles.text}>Trilha de matrizes</Text>
+                    </View>
+                    <View style={styles.trilha5}>
+                        <Image source={require('../../image/expre.png')} style={styles.img} />
+                        <Text style={styles.text}>Trilha de Expressão</Text>
+                    </View>
+                </ScrollView>
+            </View>
             <StatusBar style="" />
             <View style={styles.menubar}>
                 <Text>Menu</Text>
@@ -55,9 +76,10 @@ const styles = StyleSheet.create({
         padding: 30,
         marginRight: 10,
     },
+
     container: {
         flex: 1,
-        backgroundColor: `${colors.rosa}30`,
+        backgroundColor: colors.branco,
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -72,6 +94,49 @@ const styles = StyleSheet.create({
         width: 203,
         height: 203,
         padding: 20,
+    },
+    main: {
+        backgroundColor: colors.branco,
+        top: 35,
+        position: 'absolute',
+        width: "100%",
+        height: "86%",
+        zIndex: -1,
+    },
+    trilha1: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: `${colors.rosa}30`,
+        width: "32%",
+    },
+    trilha2: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: `${colors.azulEscuro}30`,
+        width: "32%",
+    },
+    trilha3: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: `${colors.amarelo}30`,
+        width: "32%",
+    },
+    trilha4: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: `${colors.azulClaro}30`,
+        width: "32%",
+    },
+    trilha5: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: `${colors.amarelo}30`,
+        width: "32%",dd
     },
     menubar: {
         backgroundColor: colors.verdeAgua,
