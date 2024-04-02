@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native'; // Importe o hook useNavigation
-import profileIcon from '../assets/profileIcon.png'; // Importe o ícone para Teacher Profile
-import classroomIcon from '../assets/classroomIcon.png'; // Importe o ícone para Teacher Classroom
-import homeIcon from '../assets/home.png'; // Importe o ícone para Home
+import profileIcon from '../assets/profileIcon.png';
+import classroomIcon from '../assets/classroomIcon.png'; 
+import homeIcon from '../assets/home.png'; 
 
 const BottomMenuTeacher = () => {
     const navigation = useNavigation();

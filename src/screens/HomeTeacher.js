@@ -16,6 +16,7 @@ const Home = ({ navigation }) => {
 
             <View style={styles.containerMyClassroom}>
                 <Text style={styles.titleContainerMyClassroom}>Minhas salas</Text>
+                
             </View>
 
             <View style={styles.containerCreateClassroom}>
