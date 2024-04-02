@@ -1,23 +1,18 @@
 import React from 'react';
 import { View, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native'; // Importe o hook useNavigation
-import profileIcon from '../assets/profileIcon.png';
-import classroomIcon from '../assets/classroomIcon.png'; 
+import profileIcon from '../assets/profileIcon.png'; 
 import homeIcon from '../assets/home.png'; 
 
-const BottomMenuTeacher = () => {
+const BottomMenuStudent = () => {
     const navigation = useNavigation();
 
-    const goToTeacherProfile = () => {
+    const goToStudentProfile = () => {
         navigation.navigate('TeacherProfile');
     };
 
-    const goToTeacherClassroom = () => {
-        navigation.navigate('TeacherClassroom');
-    };
-
-    const goToHomeTeacher = () => {
-        navigation.navigate('HomeTeacher');
+    const goToHomeStudent = () => {
+        navigation.navigate('HomeStudent');
     };
 
     const getIconStyle = (routeName) => {
@@ -29,14 +24,12 @@ const BottomMenuTeacher = () => {
 
     return (
         <View style={styles.container}>
-            <TouchableOpacity style={styles.button} onPress={goToHomeTeacher}>
-                <Image source={homeIcon} style={getIconStyle('HomeTeacher')} />
+            <TouchableOpacity style={styles.button} onPress={goToHomeStudent}>
+                <Image source={homeIcon} style={getIconStyle('HomeStudent')} />
             </TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={goToTeacherClassroom}>
-                <Image source={classroomIcon} style={getIconStyle('TeacherClassroom')} />
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={goToTeacherProfile}>
-                <Image source={profileIcon} style={getIconStyle('TeacherProfile')} />
+    
+            <TouchableOpacity style={styles.button} onPress={goToStudentProfile}>
+                <Image source={profileIcon} style={getIconStyle('TeacherStudent')} />
             </TouchableOpacity>
 
         </View>
@@ -49,7 +42,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         alignItems: 'center',
         backgroundColor: 'white',
-        paddingVertical: 30,
+        paddingVertical: 20,
         paddingHorizontal: 30,
         position: 'absolute',
         bottom: 0,
@@ -71,9 +64,9 @@ const styles = StyleSheet.create({
     },
 
     icon: {
-        width: 36,
-        height: 38,
+        width: 28,
+        height: 30,
     },
 });
 
-export default BottomMenuTeacher;
+export default BottomMenuStudent;
