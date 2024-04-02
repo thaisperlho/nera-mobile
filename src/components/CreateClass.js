@@ -18,24 +18,26 @@ const CreateClass = ({ navigation }) => {
 
     return (
         <View style={styles.page}>
+            {/* TopIcon do nera */}
             <View style={styles.topIcon}>
                 <IconNera />
             </View>
-
-            <View style={styles.containerCreateClass}>
+            {/* Texto 'criar sala da aula' */}
+            <View style={styles.containerClassName}>
                 <Text style={styles.titleContainerCreateClassroom}>Criar Sala de Aula</Text>
             </View>
-
-            <View>
-               <TextInput style={styles.inputsToCreateClassroom}
+            {/* Input para dar um nome a sala */}
+            <View style={styles.containerToSetClassName}>
+               <TextInput style={styles.inputToCreateClassroom}
                     onChangeText={text => setClassName(text)}
                     value={className}
                     placeholder="Digite o Nome da Sala"
                 />
             </View>
-            <View style={styles.containerCreateClass}>
+            {/* Primeiro Picker para escolher a trilha */}
+            <View style={styles.containerSelectTrail}>
                 <Picker
-                    style={styles.inputsToCreateClassroom}
+                    style={styles.formsInputStyles}
                     selectedValue={selectedTrail}
                     onValueChange={(itemValue, itemIndex) => setSelectedTrail(itemValue)}
                 >
@@ -45,9 +47,10 @@ const CreateClass = ({ navigation }) => {
                     <Picker.Item label="Trilha 3" value="Trilha 3" />
                 </Picker>
             </View>
-            <View style={styles.containerCreateClass}>
+            {/* Segundo Picker, para escolher o módulo */}
+            <View style={styles.containerSelectModule}>
                 <Picker
-                    style={styles.inputsToCreateClassroom}
+                    style={styles.formsInputStyles}
                     selectedValue={selectedModule}
                     onValueChange={(itemValue, itemIndex) => setSelectedModule(itemValue)}
                 >
@@ -57,11 +60,12 @@ const CreateClass = ({ navigation }) => {
                     <Picker.Item label="Modulo 3" value="Modulo 3" />
                 </Picker>
             </View>
-            <View style={styles.containerCreateClass}>
+            {/* Código da sala para acesso dos alunos */}
+            <View style={styles.containerClassToken}>
                 <Text style={styles.text}>Código da Sala:</Text>
                 <Text style={styles.text}>{classToken}</Text>
             </View>
-            <View style={styles.containerCreateClass}>
+            <View style={styles.containerButtonCreateClass}>
             <ButtonBlue
                 onPress={handleCreateNewClass}
                 title="Criar Sala"
@@ -86,15 +90,74 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginTop: 50
     },
-    containerCreateClass: {
+    containerClassName: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         position: 'absolute',
         top: '20%',
         left: '10%',
-        // width: '80%',
-        // height: '30%',
+        width: '80%',
+        height: '10%',
+        elevation: 5,
+    },
+    containerToSetClassName:{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
+        top: '30%',
+        left: '10%',
+        width: '80%',
+        height: '10%',
+        elevation: 5,
+    },
+    containerSelectTrail:{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
+        top: '40%',
+        left: '10%',
+        width: '80%',
+        height: '10%',
+        elevation: 5,
+    },
+
+    containerSelectModule: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
+        top: '50%',
+        left: '10%',
+        width: '80%',
+        height: '10%',
+        elevation: 5,
+    },
+
+    containerClassToken: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
+        top: '60%',
+        left: '10%',
+        width: '80%',
+        height: '10%',
+        elevation: 5,
+    },
+
+    containerButtonCreateClass:{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
+        top: '70%',
+        left: '10%',
+        width: '30%',
+        height: '10%',
+        transform: [{ translateX: '80%' }],
         elevation: 5,
     },
 
@@ -104,13 +167,33 @@ const styles = StyleSheet.create({
         top: '5%',
         fontWeight: '600',
     },
-    inputsToCreateClassroom: {
+
+    inputToCreateClassroom:{
         flex: 1,
-        borderRadius: '5px',
+        borderRadius: 30,
+        justifyContent: 'center',
         color: '#6296C4',
-        width: '80%',
-        height: '20%',
+        width: '60%',
+        height: '10%',
+        borderWidth: 1,
+        borderColor: '#6296C4',
+        paddingHorizontal: 10, // Adiciona um preenchimento horizontal para evitar que o texto toque na borda
+        margin: 20,
     },
+    formsInputStyles: {
+        flex: 1,
+        justifyContent: 'center',
+        gap: 20,
+        borderRadius: 30,
+        color: '#6296C4',
+        width: '60%',
+        height: '5%',
+        borderWidth: 1,
+        borderColor: '#6296C4',
+        paddingHorizontal: 10, // Adiciona um preenchimento horizontal para evitar que o texto toque na borda
+        margin: 20, // Adiciona um preenchimento vertical para evitar que o texto toque na borda
+    },
+
     text: {
         fontSize: 20,
         fontWeight: '650',
