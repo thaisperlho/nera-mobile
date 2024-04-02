@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import FractionScreen from "./src/screens/FractionScreen"
-
-export default function App() {
-  return (
-    <FractionScreen/>
-  )
-}
-=======
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -17,6 +8,7 @@ import TeacherProfile from './src/screens/TeacherProfile';
 import LoginScreen from './src/screens/LoginScreen';
 import StudentProfile from './src/screens/StudentProfile';
 import CreateClass from './src/components/CreateClass';
+import FractionScreen from "./src/screens/FractionScreen"
 
 const Stack = createStackNavigator();
 
@@ -31,9 +23,8 @@ export default function App() {
                 <Stack.Screen name="TeacherProfile" component={TeacherProfile} />
                 <Stack.Screen name="CreateClass" component={CreateClass} />
                 <Stack.Screen name="StudentProfile" component={StudentProfile} />
-            </Stack.Navigator>
+                <Stack.Screen name="FractionScreen" component={FractionScreen} />
+           </Stack.Navigator>
         </NavigationContainer>
     );
 };
-
->>>>>>> c5d52c884ca937dedfafa19169d96df6e8c18260

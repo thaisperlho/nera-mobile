@@ -24,7 +24,7 @@ const FractionScreen = () => {
       <Text style={styles.headerText}>MÓDULO I - Frações</Text>
       <TouchableOpacity onPress={() => setModalVisible(true)} style={styles.imageContainerIcon}>
         <Image
-          source={require('../image/icon_fracao.png')}
+          source={require('../assets/icon_fracao.png')}
           style={[styles.cornerImage]}
           resizeMode="contain"
         />
@@ -37,14 +37,14 @@ const FractionScreen = () => {
 
       <TouchableOpacity onPress={() => setModalVisible(true)} style={styles.imageContainer}>
         <Image
-          source={require('../image/ideia.png')}
+          source={require('../assets/ideia.png')}
           style={[styles.cornerImage]}
           resizeMode="contain"
         />
       </TouchableOpacity>
 
       <Image
-        source={require('../image/pizza.png')}
+        source={require('../assets/pizza.png')}
         style={[styles.pizzaImage, { height: windowHeight * 0.25, width: windowWidth * 0.6 }]}
         resizeMode="contain"
       /> 
@@ -91,7 +91,7 @@ const FractionScreen = () => {
       <TouchableOpacity style={[styles.actionButton, { width: '40%', height:'90%' }]}>
         <View style={styles.buttonContent}>
           <Image
-            source={require('../image/refresh_button.png')}
+            source={require('../assets/refresh_button.png')}
             style={[styles.actionButtonIcon]}
             resizeMode="contain"
           />
@@ -101,7 +101,7 @@ const FractionScreen = () => {
       <TouchableOpacity style={[styles.actionButton, { width: '40%', height:'90%' }]}>
         <View style={styles.buttonContent}>
           <Image
-            source={require('../image/proximo_button.png')}
+            source={require('../assets/proximo_button.png')}
             style={[styles.actionButtonIcon]}
             resizeMode="contain"
           />
@@ -125,13 +125,13 @@ const FractionScreen = () => {
           <View style={styles.modalContent}>
             <TouchableOpacity onPress={() => setModalVisible(false)} style={styles.closeButton}>
               <Image
-                source={require('../image/voltar.png')}
+                source={require('../assets/voltar.png')}
                 style={[styles.closeIcon]}
                 resizeMode="contain"
               />
             </TouchableOpacity>
             <Image
-              source={require('../image/ideia.png')}
+              source={require('../assets/ideia.png')}
               style={[styles.ideiaIcon]}
               resizeMode="contain"
             />
