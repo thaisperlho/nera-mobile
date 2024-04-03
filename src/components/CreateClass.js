@@ -11,6 +11,36 @@ const CreateClass = ({ navigation }) => {
     const [selectedModule, setSelectedModule] = useState(false);
     const [classToken, setClassToken] = useState('Token da sala');
 
+    const MockData = {
+        mockedTrails: [
+            {
+                label: 'Trilha 1',
+                value: 'Trilha 1',
+            },
+            {
+                label: 'Trilha 2',
+                value: 'Trilha 2',
+            },
+            {
+                label: 'Trilha 3',
+                value: 'Trilha 3',
+            },
+        ],
+        mockedModules: [            
+        {
+            label: 'Modulo 1',
+            value: 'Modulo 1',
+        },
+        {
+            label: 'Modulo 2',
+            value: 'Modulo 2',
+        },
+        {
+            label: 'Modulo 3',
+            value: 'Modulo 3',
+        },],
+    };
+
     const handleCreateNewClass = () => {
         // Aqui você pode adicionar a lógica para criar a sala com os dados do formulário
         navigation.navigate('CreateNewClass');
@@ -42,9 +72,9 @@ const CreateClass = ({ navigation }) => {
                     onValueChange={(itemValue, itemIndex) => setSelectedTrail(itemValue)}
                 >
                     <Picker.Item label="Selecione a Trilha" value="" />
-                    <Picker.Item label="Trilha 1" value="Trilha 1" />
-                    <Picker.Item label="Trilha 2" value="Trilha 2" />
-                    <Picker.Item label="Trilha 3" value="Trilha 3" />
+                    {MockData.mockedTrails.map((mockedTrails, index) => (
+                        <Picker.Item label={mockedTrails.label} value={mockedTrails.value} key={index} />
+                    ))}
                 </Picker>
             </View>
             {/* Segundo Picker, para escolher o módulo */}
@@ -55,15 +85,19 @@ const CreateClass = ({ navigation }) => {
                     onValueChange={(itemValue, itemIndex) => setSelectedModule(itemValue)}
                 >
                     <Picker.Item label="Selecione o Módulo>" value="" />
-                    <Picker.Item label="Modulo 1" value="Modulo 1" />
-                    <Picker.Item label="Modulo 2" value="Modulo 2" />
-                    <Picker.Item label="Modulo 3" value="Modulo 3" />
+                    {MockData.mockedModules.map((mockedModules, index) => (
+                        <Picker.Item label={mockedModules.label} value={mockedModules.value} key={index} />
+                    ))}
                 </Picker>
             </View>
             {/* Código da sala para acesso dos alunos */}
             <View style={styles.containerClassToken}>
                 <Text style={styles.text}>Código da Sala:</Text>
-                <Text style={styles.text}>{classToken}</Text>
+                <TextInput style={styles.inputToCreateClassroom}
+                onChangeText={text => setClassToken(text)}
+                value={classToken}
+                placeholder="Token da Sala"
+                editable={false}/>
             </View>
             <View style={styles.containerButtonCreateClass}>
             <ButtonBlue
