@@ -2,7 +2,7 @@ import React from 'react';
 import { View, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native'; // Importe o hook useNavigation
 import profileIcon from '../assets/profileIcon.png'; 
-import homeIcon from '../assets/home.png'; 
+import trail from '../assets/trail.png'; 
 
 const BottomMenuStudent = () => {
     const navigation = useNavigation();
@@ -11,8 +11,8 @@ const BottomMenuStudent = () => {
         navigation.navigate('StudentProfile');
     };
 
-    const goToHomeStudent = () => {
-        navigation.navigate('HomeStudent');
+    const goToStudentTrails = () => {
+        navigation.navigate('StudentTrails');
     };
 
     const getIconStyle = (routeName) => {
@@ -24,8 +24,8 @@ const BottomMenuStudent = () => {
 
     return (
         <View style={styles.container}>
-            <TouchableOpacity style={styles.button} onPress={goToHomeStudent}>
-                <Image source={homeIcon} style={getIconStyle('HomeStudent')} />
+            <TouchableOpacity style={styles.button} onPress={goToStudentTrails}>
+                <Image source={trail} style={getIconStyle('StudentTrails')} />
             </TouchableOpacity>
     
             <TouchableOpacity style={styles.button} onPress={goToStudentProfile}>
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         alignItems: 'center',
         backgroundColor: 'white',
-        paddingVertical: 20,
+        paddingVertical: 30,
         paddingHorizontal: 30,
         position: 'absolute',
         bottom: 0,
@@ -64,8 +64,9 @@ const styles = StyleSheet.create({
     },
 
     icon: {
-        width: 28,
-        height: 30,
+        width: 32,
+        height: 34,
+        tintColor: '#135794',
     },
 });
 
