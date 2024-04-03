@@ -15,8 +15,8 @@ const CircleConquist = ({img, txt}) => {
 const styles = StyleSheet.create({
 
     view_conquistCircle: {
-        width: 180,
-        height: '100%S',
+        width: "35%",
+        height: '100%',
         alignItems: 'center',
         padding: 5,
         gap: 15

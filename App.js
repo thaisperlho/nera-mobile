@@ -8,6 +8,7 @@ import TeacherProfile from './src/screens/TeacherProfile';
 import LoginScreen from './src/screens/LoginScreen';
 import StudentProfile from './src/screens/StudentProfile';
 import CreateClass from './src/components/CreateClass';
+import RegisterTeacher from './src/screens/RegisterTeacher';
 
 const Stack = createStackNavigator();
 
@@ -22,6 +23,7 @@ export default function App() {
                 <Stack.Screen name="TeacherProfile" component={TeacherProfile} />
                 <Stack.Screen name="CreateClass" component={CreateClass} />
                 <Stack.Screen name="StudentProfile" component={StudentProfile} />
+                <Stack.Screen name="RegisterTeacher" component={RegisterTeacher} />
             </Stack.Navigator>
         </NavigationContainer>
     );

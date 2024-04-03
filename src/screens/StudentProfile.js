@@ -8,7 +8,7 @@ const StudentProfile = ({ navigation }) => {
     return (
         <View style={styles.div_main}>
             <View style={styles.div_perfil}>
-                <Image source={require('../assets/ImgProfile.png')}></Image>
+                <Image source={require('../assets/ImgProfile.png')} resizeMode="contain" style={[{ width: 80 }, { height: 80 }]}></Image>
                 <View>
                     <Text style={{ fontWeight: 'bold' }}>@Nickname</Text>
                     <Text style={{ fontWeight: 'bold' }}>Nome Sobrenome</Text>
@@ -21,15 +21,49 @@ const StudentProfile = ({ navigation }) => {
                     <Text style={{ fontSize: 23 }}>Conquista</Text>
                 </View>
                 <ScrollView style={styles.scrView_carrouselConqs} horizontal={true}>
+
                     <CircleConquist img={require('../assets/exp_fracao.png')} txt={"Explorador de frações"}></CircleConquist>
                     <CircleConquist img={require('../assets/camp_deno.png')} txt={"Campeão do Denominador"}></CircleConquist>
                     <CircleConquist img={require('../assets/estrela_frac.png')} txt={"Estrela fracionária"}></CircleConquist>
+
                 </ScrollView>
             </View>
 
             <View style={styles.div_estatisticas}>
 
+                <View style={[{ width: '100%' }, { height: '14%' }, { alignItems: 'center' }]}>
+                    <Text style={[{ fontSize: 20 }, { fontWeight: 'bold' }]}>Estatistica do Perfil</Text>
+                </View>
+
+                <View style={[{ width: '100%' }, { height: '43%' }, { display: 'flex' }, { flexDirection: 'row' }, { alignItems: 'center' }, { padding: 10 }, { gap: 10 }]}>
+
+
+                    <View style={[{ width: '48%' }, { height: '90%' }, { borderRadius: 25 }, { borderColor: '#F29F05' }, { borderWidth: 3 }]}>
+
+                    </View>
+                    <View style={[{ width: '48%' }, { height: '90%' }, { borderRadius: 25 }, { borderColor: '#F29F05' }, { borderWidth: 3 }]}>
+
+                    </View>
+                    
+                </View>
+
+                <View style={[{ width: '100%' }, { height: '43%' }, { display: 'flex' }, { flexDirection: 'row' }, { alignItems: 'center' }, { padding: 10 }, { gap: 10 }]}>
+
+
+                    <View style={[{ width: '48%' }, { height: '90%' }, { borderRadius: 25 }, { borderColor: '#F29F05' }, { borderWidth: 3 }]}>
+
+                    </View>
+                    <View style={[{ width: '48%' }, { height: '90%' }, { borderRadius: 25 }, { borderColor: '#F29F05' }, { borderWidth: 3 }]}>
+
+                    </View>
+
+
+
+
+                </View>
+
             </View>
+
             <MenuStudent></MenuStudent>
         </View>
     )
@@ -41,7 +75,7 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         width: '100%',
         height: '100%',
-        backgroundColor:'white'
+        backgroundColor: 'white'
     },
 
     div_perfil: {
@@ -50,8 +84,8 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         height: '20%',
         width: '100%',
-        paddingLeft: 20,
-        gap: 10
+        gap: 10,
+        paddingLeft: 30
     },
 
     img_icone: {
@@ -69,7 +103,7 @@ const styles = StyleSheet.create({
     div_estatisticas: {
         width: '100%',
         height: '35%',
-        backgroundColor: 'lightgreen'
+        backgroundColor: 'white'
     },
 
     view_txt_conquista: {

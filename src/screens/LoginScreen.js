@@ -9,21 +9,31 @@ const LoginScreen = ({ navigation }) => {
 
     const [cor, setCor] = useState(colors.amarelo);
     const [flexDirection, setflexDirection] = useState("column");
+    var validacao;
 
-    const changeColor = (corFunc, flexDirect) => {
+
+    const changeColor = (corFunc, flexDirect, num) => {
         setCor(corFunc);
         setflexDirection(flexDirect)
-    };
+    }
+
+    const validacaoCaminho = () => {
+       if(cor === colors.amarelo){
+        navigation.navigate('HomeTeacher');
+       }else if(cor === colors.laranja){
+        navigation.navigate('StudentProfile');
+       }
+    }
 
     const home = () => {
         navigation.replace('Home')
     }
 
-    const StudentProfile = () => {
-        navigation.replace('StudentProfile')
+    const RegisterTeacher = () => {
+        navigation.replace('RegisterTeacher')
     }
 
-     const handleEntrar = () => {
+    const handleEntrar = () => {
         navigation.navigate('HomeTeacher');
     };
 
@@ -41,18 +51,18 @@ const LoginScreen = ({ navigation }) => {
                 {/*view form buttons*/}
 
                 <View style={stylesButtons.div_buttons}>
-                    <Pressable style={stylesButtons.button_professor} onPress={() => changeColor(colors.amarelo)}>
+                    <Pressable style={stylesButtons.button_professor} onPress={() => changeColor(colors.amarelo, '', 1)}>
                         <Text style={[{ fontSize: 20 }, { color: 'white' }, { fontWeight: 'bold' }]}>Professor</Text>
                     </Pressable>
                     <View style={[stylesButtons.div_transction, { flexDirection: flexDirection }]}>
                         <View style={stylesButtons.div_prof}>
-                            <Pressable style={stylesButtons.press_prof} onPress={() => changeColor(colors.amarelo)}></Pressable>
+                            <Pressable style={stylesButtons.press_prof} onPress={() => changeColor(colors.amarelo, '', 1)}></Pressable>
                         </View>
                         <View style={stylesButtons.div_aluno}>
-                            <Pressable style={stylesButtons.press_aluno} onPress={() => changeColor(colors.laranja, 'column-reverse')}></Pressable>
+                            <Pressable style={stylesButtons.press_aluno} onPress={() => changeColor(colors.laranja, 'column-reverse', 2)}></Pressable>
                         </View>
                     </View>
-                    <Pressable style={stylesButtons.button_aluno} onPress={() => changeColor(colors.laranja, 'column-reverse')}>
+                    <Pressable style={stylesButtons.button_aluno} onPress={() => changeColor(colors.laranja, 'column-reverse', 2)}>
                         <Text style={[{ fontSize: 20 }, { color: 'white' }, { fontWeight: 'bold' }]}>Aluno</Text>
                     </Pressable>
                 </View>
@@ -69,8 +79,8 @@ const LoginScreen = ({ navigation }) => {
 
                 </View>
 
-                <View style={stylesForm.opcoesEntrar}>                
-                    <Pressable style={stylesForm.button_entrar} onPress={handleEntrar}>
+                <View style={stylesForm.opcoesEntrar}>
+                    <Pressable style={stylesForm.button_entrar} onPress={validacaoCaminho}>
 
                         <Text style={[{ fontSize: 15 }, { color: 'white' }]}>Entrar</Text>
                     </Pressable>
@@ -83,7 +93,7 @@ const LoginScreen = ({ navigation }) => {
                     </View>
 
 
-                    <Pressable style={stylesForm.button_criarCon} onPress={StudentProfile}>
+                    <Pressable style={stylesForm.button_criarCon} onPress={RegisterTeacher}>
                         <Text style={[{ fontSize: 15 }, { color: 'white' }]}>Criar conta</Text>
                     </Pressable>
                 </View>
