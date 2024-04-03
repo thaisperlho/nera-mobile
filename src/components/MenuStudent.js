@@ -11,6 +11,10 @@ const BottomMenuStudent = () => {
         navigation.navigate('StudentProfile');
     };
 
+    const goToFractionScreen = () => {
+        navigation.navigate('FractionScreen');
+    };
+
     const goToStudentTrails = () => {
         navigation.navigate('StudentTrails');
     };
@@ -27,7 +31,9 @@ const BottomMenuStudent = () => {
             <TouchableOpacity style={styles.button} onPress={goToStudentTrails}>
                 <Image source={trail} style={getIconStyle('StudentTrails')} />
             </TouchableOpacity>
-    
+            <TouchableOpacity style={styles.button} onPress={goToFractionScreen}>
+                <Image source={profileIcon} style={getIconStyle('FractionScreen')} />
+            </TouchableOpacity>
             <TouchableOpacity style={styles.button} onPress={goToStudentProfile}>
                 <Image source={profileIcon} style={getIconStyle('StudentProfile')} />
             </TouchableOpacity>
