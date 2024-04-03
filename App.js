@@ -11,6 +11,7 @@ import CreateClass from './src/components/CreateClass';
 import RegisterTeacher from './src/screens/RegisterTeacher';
 import StudentTrails from './src/screens/StudentTrails';
 import FractionScreen from '/src/screens/FractionScreen';
+import FractionTrails from './src/screens/FractionTrails';
 
 const Stack = createStackNavigator();
 
@@ -28,6 +29,7 @@ export default function App() {
                 <Stack.Screen name="RegisterTeacher" component={RegisterTeacher} />
                 <Stack.Screen name="StudentTrails" component={StudentTrails} />
                 <Stack.Screen name="FractionScreen" component={FractionScreen} />
+                <Stack.Screen name="FractionTrails" component={FractionTrails} />
             </Stack.Navigator>
         </NavigationContainer>
     );
