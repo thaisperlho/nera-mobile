@@ -1,9 +1,9 @@
 import { Image, Text, View, StyleSheet, ScrollView } from "react-native";
 import CircleConquist from '../components/CircleConquist';
-import MenuStudent from '../components/MenuStudent';
+import BottomMenuStudent from '../components/MenuStudent';
 
 
-const StudentProfile = ({ navigation }) => {
+const StudentProfile = () => {
 
     return (
         <View style={styles.div_main}>
@@ -64,7 +64,7 @@ const StudentProfile = ({ navigation }) => {
 
             </View>
 
-            <MenuStudent></MenuStudent>
+            <BottomMenuStudent/>
         </View>
     )
 }
