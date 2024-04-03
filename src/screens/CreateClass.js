@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, Picker, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import BottomMenuTeacher from './MenuTeacher';
-import ButtonBlue from './ButtonBlue';
-import IconNera from './IconNera';
+import BottomMenuTeacher from '../components/MenuTeacher';
+import ButtonBlue from '../components/ButtonBlue';
+import IconNera from '../components/IconNera';
 
 const CreateClass = ({ navigation }) => {
     const [className, setClassName] = useState('');
@@ -41,9 +41,9 @@ const CreateClass = ({ navigation }) => {
         },],
     };
 
-    const handleCreateNewClass = () => {
+    const handleCreateNewClassPress = () => {
         // Aqui você pode adicionar a lógica para criar a sala com os dados do formulário
-        navigation.navigate('CreateNewClass');
+        navigation.navigate('TeacherClassroom');
     };
 
     return (
@@ -101,7 +101,7 @@ const CreateClass = ({ navigation }) => {
             </View>
             <View style={styles.containerButtonCreateClass}>
             <ButtonBlue
-                onPress={handleCreateNewClass}
+                onPress={handleCreateNewClassPress}
                 title="Criar Sala"
                 accessibilityLabel="Criar Sala"
             />

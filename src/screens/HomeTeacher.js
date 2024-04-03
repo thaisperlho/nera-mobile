@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, FlatList } from 'react-native';
+import { View, Text,TouchableOpacity, StyleSheet, Image, FlatList } from 'react-native';
 import IconNera from '../components/IconNera';
 import BottomMenuTeacher from '../components/MenuTeacher';
 import ButtonBlue from '../components/ButtonBlue';
@@ -7,6 +7,10 @@ import ButtonBlue from '../components/ButtonBlue';
 const Home = ({ navigation }) => {
     const handleCreateClassPress = () => {
         navigation.navigate('CreateClass');
+    };
+
+    const handleClassPressSendToTeacherClassroom = () => {
+        navigation.navigate('TeacherClassroom');
     };
 
     const imageUrls = [
@@ -31,10 +35,12 @@ const Home = ({ navigation }) => {
                     keyExtractor={(item) => item.id.toString()}
                     numColumns={3}
                     renderItem={({ item }) => (
-                        <View style={styles.imageContainer}>
+                        <TouchableOpacity 
+                            style={styles.imageContainer}
+                            onPress={() => handleClassPressSendToTeacherClassroom(item.label)}>
                             <Image style={styles.image} source={item.url} />
                             <Text style={styles.imageLabel}>{item.label}</Text>
-                        </View>
+                        </TouchableOpacity>
                     )}
                 />
             </View>

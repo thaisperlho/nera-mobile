@@ -7,7 +7,7 @@ import TeacherClassroom from './src/screens/TeacherClassroom';
 import TeacherProfile from './src/screens/TeacherProfile';
 import LoginScreen from './src/screens/LoginScreen';
 import StudentProfile from './src/screens/StudentProfile';
-import CreateClass from './src/components/CreateClass';
+import CreateClass from './src/screens/CreateClass';
 import RegisterTeacher from './src/screens/RegisterTeacher';
 import StudentTrails from './src/screens/StudentTrails';
 import FractionScreen from '/src/screens/FractionScreen';
