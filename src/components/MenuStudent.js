@@ -11,8 +11,8 @@ const BottomMenuStudent = () => {
         navigation.navigate('StudentProfile');
     };
 
-    const goToTrailScreen = () => {
-        navigation.navigate('');
+    const goToStudentTrails = () => {
+        navigation.navigate('StudentTrails');
     };
 
     const getIconStyle = (routeName) => {
@@ -24,8 +24,8 @@ const BottomMenuStudent = () => {
 
     return (
         <View style={styles.container}>
-            <TouchableOpacity style={styles.button} onPress={goToTrailScreen}>
-                <Image source={trail} style={getIconStyle('TrailSreen')} />
+            <TouchableOpacity style={styles.button} onPress={goToStudentTrails}>
+                <Image source={trail} style={getIconStyle('StudentTrails')} />
             </TouchableOpacity>
     
             <TouchableOpacity style={styles.button} onPress={goToStudentProfile}>

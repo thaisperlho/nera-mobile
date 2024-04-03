@@ -1,9 +1,9 @@
-import { View, Text, ScrollView, StyleSheet } from 'react-native'
-import React from 'react'
-import colors from '../components/styles'
-import MenuStudent from '../components/MenuStudent';
+import React from 'react';
+import { View, Text, ScrollView, StyleSheet, Image } from 'react-native';
+import colors from '../components/styles';
+import BottomMenuStudent from '../components/MenuTeacher';
 
-const StudentTrails = ({ navigation }) => {
+const StudentTrails = () => {
     return (
         <View style={styles.divT}>
             <View style={styles.box}>
@@ -22,7 +22,7 @@ const StudentTrails = ({ navigation }) => {
                     </View>
                     <View style={styles.trilha3}>
                         <Image source={require('../assets/geo.png')} style={styles.img} />
-                        <Text style={styles.text}>TTrilha de Geometria</Text>
+                        <Text style={styles.text}>Trilha de Geometria</Text>
                     </View>
                     <View style={styles.trilha4}>
                         <Image source={require('../assets/matriz.png')} style={styles.img} />
@@ -34,10 +34,11 @@ const StudentTrails = ({ navigation }) => {
                     </View>
                 </ScrollView>
             </View>
-            <MenuStudent></MenuStudent>
+            <View><BottomMenuStudent />
+            </View>
         </View>
-    )
-}
+    );
+};
 
 const styles = StyleSheet.create({
     box: {
@@ -120,4 +121,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default StudentTrails
+export default StudentTrails;
