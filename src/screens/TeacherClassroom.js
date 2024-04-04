@@ -25,9 +25,9 @@ const TeacherClassroom = () => {
             <View style={styles.topIcon}>
                 <IconNera />
             </View>
-            <View>
-                <Text>{ClassName}</Text>
-            </View>
+            {/* <View>
+                <Text>6 ano</Text>
+            </View> */}
             <View style={styles.containerStudentsRanking}>
                 {mockStudents.map((student, index) => (
                     <View key={student.name} style={[styles.podiumContainer, index === 0 && styles.gold]}>
@@ -42,6 +42,7 @@ const TeacherClassroom = () => {
                 <ButtonBlue onPress={handleCheckPerformanceOfEachStudent}
                     title="Desempenho"
                     accessibilityLabel="Desempenho"
+                    style={styles.buttonCreateClassCustomization}
                 />
             </View>
             <BottomMenuTeacher />
@@ -84,15 +85,17 @@ const styles = StyleSheet.create({
         shadowRadius: 3,
         elevation: 5,
     },
+    buttonCreateClassCustomization: {
+        transform: [{ translateX: 2000 }],
+    },
     containerCheckPerformanceOfEachStudent: {
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'white',
         position: 'absolute',
-        top: 700,
+        top: 500,
         left: 35,
         right:5,
-        transform: [{ translateX: 10 }],
         width: '80%',
         height: '10%',
         borderRadius: 30,

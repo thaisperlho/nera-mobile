@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, Picker, StyleSheet } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import {Picker} from '@react-native-picker/picker';
 import { useNavigation } from '@react-navigation/native';
 import BottomMenuTeacher from '../components/MenuTeacher';
 import ButtonBlue from '../components/ButtonBlue';
@@ -191,7 +192,7 @@ const styles = StyleSheet.create({
         left: '10%',
         width: '30%',
         height: '10%',
-        transform: [{ translateX: '80%' }],
+        transform: [{ translateX: 20 }],
         elevation: 5,
     },
 

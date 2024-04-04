@@ -4,10 +4,10 @@
     "slug": "nera-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "src/assets/icone.png",
+    "icon": "src/assets/Icone.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "src/assets/icone.png",
+      "image": "src/assets/Icone.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,12 +19,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "src/assets/icone.png",
+        "foregroundImage": "src/assets/Icone.png",
         "backgroundColor": "#ffffff"
       }
     },
     "web": {
-      "favicon": "src/assets/icone.png"
+      "favicon": "src/assets/Icone.png"
     }
   }
 }

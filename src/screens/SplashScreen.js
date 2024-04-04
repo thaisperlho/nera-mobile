@@ -34,7 +34,7 @@ const SplashScreen = ({ navigation }) => {
     return (
         <View style={[styles.container, styles.whiteBackground]}>
             <Animated.Image
-                source={require('../assets/icone.png')} 
+                source={require('../assets/Icone.png')} 
                 style={[styles.image, animatedStyle]}
                 resizeMode="contain"
             />
