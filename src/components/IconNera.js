@@ -6,7 +6,7 @@ import { Image, StyleSheet } from 'react-native';
 const IconNera = () => {
     return (
         <Image
-            source={require('../assets/Icone.png')}
+            source={require('../assets/icone.png')}
             style={styles.image}
             resizeMode="contain"
         />
