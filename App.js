@@ -10,7 +10,7 @@ import StudentProfile from './src/screens/StudentProfile';
 import CreateClass from './src/screens/CreateClass';
 import RegisterTeacher from './src/screens/RegisterTeacher';
 import StudentTrails from './src/screens/StudentTrails';
-import FractionScreen from '/src/screens/FractionScreen';
+import FractionScreen from './src/screens/FractionScreen';
 import FractionTrails from './src/screens/FractionTrails';
 
 const Stack = createStackNavigator();

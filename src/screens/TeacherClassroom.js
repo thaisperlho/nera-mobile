@@ -3,15 +3,16 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 import BottomMenuTeacher from '../components/MenuTeacher';
 import ButtonBlue from '../components/ButtonBlue';
 import IconNera from '../components/IconNera';
+import profileIcon from '../assets/profileIcon.png';
 
 const TeacherClassroom = () => {
     const mockStudents = [
-        { name: 'Amanda    ', score: 9, imageUrl: require('../assets/profileIcon.png') },
-        { name: 'Kedsson   ', score: 7, imageUrl: require('../assets/profileIcon.png') },
-        { name: 'Larissa   ', score: 8, imageUrl: require('../assets/profileIcon.png') },
-        { name: 'Thais     ', score: 9, imageUrl: require('../assets/profileIcon.png') },
-        { name: 'Vinicius  ', score: 2, imageUrl: require('../assets/profileIcon.png') },
-        { name: 'Mario     ', score: 6, imageUrl: require('../assets/profileIcon.png') },
+        { name: 'Amanda    ', score: 9, imageUrl: profileIcon},
+        { name: 'Kedsson   ', score: 7, imageUrl: profileIcon},
+        { name: 'Larissa   ', score: 8, imageUrl: profileIcon},
+        { name: 'Thais     ', score: 9, imageUrl: profileIcon},
+        { name: 'Vinicius  ', score: 2, imageUrl: profileIcon},
+        { name: 'Mario     ', score: 6, imageUrl: profileIcon},
     ];
     const handleCheckPerformanceOfEachStudent = () => {
 

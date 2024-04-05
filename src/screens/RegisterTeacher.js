@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { StatusBar, StyleSheet, Text, View, Image, Pressable, TextInput } from "react-native";
 import colors from '../components/styles';
 import RadioButton from '../components/redioButton';
-
+import logoNeraMinimizado from '../assets/logoneraMinimizado.png';
 
 
 const LoginScreen = ({ navigation }) => {
@@ -25,7 +25,7 @@ const LoginScreen = ({ navigation }) => {
             <StatusBar style="" />
             {/*view img*/}
             <View style={stylesButtons.top}>
-                <Image source={require('../assets/logoneraMinimizado.png')} style={stylesButtons.img} />
+                <Image source={logoNeraMinimizado} style={stylesButtons.img} />
             </View>
 
             {/*view form*/}

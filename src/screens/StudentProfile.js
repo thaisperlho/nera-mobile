@@ -1,19 +1,23 @@
 import { Image, Text, View, StyleSheet, ScrollView } from "react-native";
 import CircleConquist from '../components/CircleConquist';
 import BottomMenuStudent from '../components/MenuStudent';
-
+import imageProfile from '../assets/ImgProfile.png';
+import icone from '../assets/Icone.png';
+import exploradorFracao from '../assets/exp_fracao.png';
+import campeaoDenominador from '../assets/camp_deno.png';
+import estrelaFracionaria from '../assets/estrela_frac.png';
 
 const StudentProfile = () => {
 
     return (
         <View style={styles.div_main}>
             <View style={styles.div_perfil}>
-                <Image source={require('../assets/ImgProfile.png')} resizeMode="contain" style={[{ width: 80 }, { height: 80 }]}></Image>
+                <Image source={imageProfile} resizeMode="contain" style={[{ width: 80 }, { height: 80 }]}></Image>
                 <View>
                     <Text style={{ fontWeight: 'bold' }}>@Nickname</Text>
                     <Text style={{ fontWeight: 'bold' }}>Nome Sobrenome</Text>
                 </View>
-                <Image source={require('../assets/Icone.png')} style={styles.img_icone} resizeMode="contain"></Image>
+                <Image source={icone} style={styles.img_icone} resizeMode="contain"></Image>
             </View>
 
             <View style={styles.div_conquistas}>
@@ -22,9 +26,9 @@ const StudentProfile = () => {
                 </View>
                 <ScrollView style={styles.scrView_carrouselConqs} horizontal={true}>
 
-                    <CircleConquist img={require('../assets/exp_fracao.png')} txt={"Explorador de frações"}></CircleConquist>
-                    <CircleConquist img={require('../assets/camp_deno.png')} txt={"Campeão do Denominador"}></CircleConquist>
-                    <CircleConquist img={require('../assets/estrela_frac.png')} txt={"Estrela fracionária"}></CircleConquist>
+                    <CircleConquist img={exploradorFracao} txt={"Explorador de frações"}></CircleConquist>
+                    <CircleConquist img={campeaoDenominador} txt={"Campeão do Denominador"}></CircleConquist>
+                    <CircleConquist img={estrelaFracionaria} txt={"Estrela fracionária"}></CircleConquist>
 
                 </ScrollView>
             </View>

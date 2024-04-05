@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { View, Image, Animated, Easing, StyleSheet } from 'react-native';
+import icone from '../assets/Icone.png';
 
 const SplashScreen = ({ navigation }) => {
     const rotation = useRef(new Animated.Value(0)).current;
@@ -34,7 +35,7 @@ const SplashScreen = ({ navigation }) => {
     return (
         <View style={[styles.container, styles.whiteBackground]}>
             <Animated.Image
-                source={require('../assets/Icone.png')} 
+                source={icone} 
                 style={[styles.image, animatedStyle]}
                 resizeMode="contain"
             />

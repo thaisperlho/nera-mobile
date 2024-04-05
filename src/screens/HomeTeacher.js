@@ -3,6 +3,12 @@ import { View, Text,TouchableOpacity, StyleSheet, Image, FlatList } from 'react-
 import IconNera from '../components/IconNera';
 import BottomMenuTeacher from '../components/MenuTeacher';
 import ButtonBlue from '../components/ButtonBlue';
+import classBlue from '../assets/classBlue.png';
+import classPink from '../assets/classPink.png';
+import classYellow from '../assets/classYellow.png';
+import classAqua from '../assets/classAqua.png';
+
+
 
 const Home = ({ navigation }) => {
     const handleCreateClassPress = () => {
@@ -14,12 +20,12 @@ const Home = ({ navigation }) => {
     };
 
     const imageUrls = [
-        { id: 1, url: require('../assets/classBlue.png'), label: '6 ano C' },
-        { id: 2, url: require('../assets/classPink.png'), label: '7 ano B' },
-        { id: 3, url: require('../assets/classYellow.png'), label: '6 ano B' },
-        { id: 4, url: require('../assets/classAqua.png'), label: '7 ano A' },
-        { id: 5, url: require('../assets/classBlue.png'), label: '6 ano A' },
-        { id: 6, url: require('../assets/classYellow.png'), label: '7 ano C' },
+        { id: 1, url: classBlue, label: '6 ano C' },
+        { id: 2, url: classPink, label: '7 ano B' },
+        { id: 3, url: classYellow, label: '6 ano B' },
+        { id: 4, url: classAqua, label: '7 ano A' },
+        { id: 5, url: classBlue, label: '6 ano A' },
+        { id: 6, url: classYellow, label: '7 ano C' },
     ];
 
     return (

@@ -231,7 +231,7 @@ const styles = StyleSheet.create({
 
     text: {
         fontSize: 20,
-        fontWeight: '650',
+        fontWeight: 600,
     },
 });
 

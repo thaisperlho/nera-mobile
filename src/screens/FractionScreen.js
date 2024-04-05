@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, Dimensions, Modal, Button } from 'react-native';
 import colors from '../components/styles';
+import iconFracao from '../assets/icon_fracao.png';
+import ideia from '../assets/ideia.png';
+import pizza from '../assets/pizza.png';
+import refreshButton from '../assets/refresh_button.png';
+import nextButton from '../assets/proximo_button.png';
+import voltar from '../assets/voltar.png';
 
 const FractionScreen = () => {
   const [selectedFraction, setSelectedFraction] = useState(null);
@@ -24,7 +30,7 @@ const FractionScreen = () => {
       <Text style={styles.headerText}>MÓDULO I - Frações</Text>
       <TouchableOpacity onPress={() => setModalVisible(true)} style={styles.imageContainerIcon}>
         <Image
-          source={require('../assets/icon_fracao.png')}
+          source={iconFracao}
           style={[styles.cornerImage]}
           resizeMode="contain"
         />
@@ -37,14 +43,14 @@ const FractionScreen = () => {
 
       <TouchableOpacity onPress={() => setModalVisible(true)} style={styles.imageContainer}>
         <Image
-          source={require('../assets/ideia.png')}
+          source={ideia}
           style={[styles.cornerImage]}
           resizeMode="contain"
         />
       </TouchableOpacity>
 
       <Image
-        source={require('../assets/pizza.png')}
+        source={pizza}
         style={[styles.pizzaImage, { height: windowHeight * 0.25, width: windowWidth * 0.6 }]}
         resizeMode="contain"
       /> 
@@ -91,7 +97,7 @@ const FractionScreen = () => {
       <TouchableOpacity style={[styles.actionButton, { width: '40%', height:'90%' }]}>
         <View style={styles.buttonContent}>
           <Image
-            source={require('../assets/refresh_button.png')}
+            source={refreshButton}
             style={[styles.actionButtonIcon]}
             resizeMode="contain"
           />
@@ -101,7 +107,7 @@ const FractionScreen = () => {
       <TouchableOpacity style={[styles.actionButton, { width: '40%', height:'90%' }]}>
         <View style={styles.buttonContent}>
           <Image
-            source={require('../assets/proximo_button.png')}
+            source={nextButton}
             style={[styles.actionButtonIcon]}
             resizeMode="contain"
           />
@@ -125,13 +131,13 @@ const FractionScreen = () => {
           <View style={styles.modalContent}>
             <TouchableOpacity onPress={() => setModalVisible(false)} style={styles.closeButton}>
               <Image
-                source={require('../assets/voltar.png')}
+                source={voltar}
                 style={[styles.closeIcon]}
                 resizeMode="contain"
               />
             </TouchableOpacity>
             <Image
-              source={require('../assets/ideia.png')}
+              source={ideia}
               style={[styles.ideiaIcon]}
               resizeMode="contain"
             />

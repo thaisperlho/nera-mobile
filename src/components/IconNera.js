@@ -2,11 +2,12 @@
 
 import React from 'react';
 import { Image, StyleSheet } from 'react-native';
+import icone from '../assets/Icone.png';
 
 const IconNera = () => {
     return (
         <Image
-            source={require('../assets/Icone.png')}
+            source={icone}
             style={styles.image}
             resizeMode="contain"
         />

@@ -3,6 +3,7 @@ import React from 'react'
 import BottomMenuStudent from '../components/MenuStudent';
 import colors from '../components/styles';
 import ButtonModules from '../components/ButtonModules';
+import fracao from '../assets/fracao.png';
 
 const FractionTrails = ({navigation}) => {
     const handleAccessModulePress = () => {
@@ -12,7 +13,7 @@ const FractionTrails = ({navigation}) => {
         <View style={styles.container}>
             <ScrollView contentContainerStyle={styles.scrollView}>
                 <View style={styles.header} >
-                    <Image source={require('../assets/fracao.png')} style={styles.img} />
+                    <Image source={fracao} style={styles.img} />
                     <Text style={styles.text}>Frações</Text>
                 </View>
                 <View style={styles.grid}>
