@@ -15,7 +15,7 @@ const TeacherClassroom = () => {
         { name: 'Mario     ', score: 6, imageUrl: profileIcon},
     ];
     const handleCheckPerformanceOfEachStudent = () => {
-
+        
     };
 
     // Ordenando os alunos pelo score, do maior para o menor
@@ -86,20 +86,18 @@ const styles = StyleSheet.create({
         shadowRadius: 3,
         elevation: 5,
     },
-    buttonCreateClassCustomization: {
-        transform: [{ translateX: 2000 }],
-    },
     containerCheckPerformanceOfEachStudent: {
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'white',
         position: 'absolute',
-        top: 500,
+        top: 600,
         left: 35,
         right:5,
         width: '80%',
         height: '10%',
         borderRadius: 30,
+        transform: [{ translateX: 10 }],
         shadowColor: '#000',
         shadowOffset: {
             width: 1,
