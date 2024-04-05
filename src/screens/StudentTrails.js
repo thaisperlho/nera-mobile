@@ -1,21 +1,26 @@
 import React from 'react';
-import { View, Text, ScrollView, StyleSheet, Image } from 'react-native';
+import { View, Text, ScrollView, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import colors from '../components/styles';
 import BottomMenuStudent from '../components/MenuStudent';
 
-const StudentTrails = () => {
+const StudentTrails = ({navigation}) => {
+    const handleAccessTrailPress = () => {
+        navigation.navigate('FractionTrails');
+    };
     return (
         <View style={styles.container}>
             <View style={styles.divT}>
-                <View style={styles.box}>
+                <View style={styles.box}  >
                     <Image source={require('../assets/trilha.png')} style={styles.iconeBox} />
                     <Text style={styles.textBox}>Trilhas</Text>
                 </View>
                 <View style={styles.main}>
                     <ScrollView horizontal={true} style={{ display: 'flex', flexDirection: 'row' }}>
                         <View style={styles.trilha1}>
+                            <TouchableOpacity onPress={handleAccessTrailPress}>
                             <Image source={require('../assets/fracao.png')} style={styles.img} />
                             <Text style={styles.text}>Trilha de Frações</Text>
+                            </TouchableOpacity>
                         </View>
                         <View style={styles.trilha2}>
                             <Image source={require('../assets/por.png')} style={styles.img} />
@@ -49,6 +54,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     box: {
+        position: 'absolute',
+        top: 35,
         flexDirection: 'row',
     },
     textBox: {
@@ -81,9 +88,10 @@ const styles = StyleSheet.create({
         padding: 20,
     },
     main: {
-        top: 35,
+        position: 'absolute',
+        top: 0,
         width: "100%",
-        height: "86%",
+        height: "88%",   
     },
     trilha1: {
         display: 'flex',
@@ -110,7 +118,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: `${colors.azulClaro}30`,
+        backgroundColor: `${colors.verdeAgua}30`,
         width: "32%",
     },
     trilha5: {

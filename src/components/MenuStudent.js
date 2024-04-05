@@ -11,10 +11,6 @@ const BottomMenuStudent = () => {
         navigation.navigate('StudentProfile');
     };
 
-    const goToFractionScreen = () => {
-        navigation.navigate('FractionScreen');
-    };
-
     const goToStudentTrails = () => {
         navigation.navigate('StudentTrails');
     };
@@ -30,9 +26,6 @@ const BottomMenuStudent = () => {
         <View style={styles.container}>
             <TouchableOpacity style={styles.button} onPress={goToStudentTrails}>
                 <Image source={trail} style={getIconStyle('StudentTrails')} />
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={goToFractionScreen}>
-                <Image source={profileIcon} style={getIconStyle('FractionScreen')} />
             </TouchableOpacity>
             <TouchableOpacity style={styles.button} onPress={goToStudentProfile}>
                 <Image source={profileIcon} style={getIconStyle('StudentProfile')} />
@@ -50,7 +43,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         paddingVertical: 30,
         paddingHorizontal: 30,
-        position: 'absolute',
+        position: 'fixed',
         bottom: 0,
         left: 0,
         right: 0,
